@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_state/Providers/Data/fetch_provider.dart';
+import 'package:provider_state/Providers/theme_provider.dart';
+import 'package:provider_state/Providers/language_provider.dart';
+import 'package:provider_state/Views/user_list_view.dart';
+import 'package:provider_state/l10n/l10n.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => FetchProvider(),
-      child: MyApp(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => FetchProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => LanguageProvider()),
+      ],
+      child: const MyApp(),
     ),
   );
 }
@@ -16,27 +25,38 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Build Context is calling");
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Consumer<FetchProvider>(
-            builder: (ctx, provider, __) {
-              print("Consumer is calling");
-              return Text(
-                '${provider.getCount()}',
-                style: TextStyle(fontSize: 30),
-              );
-            },
+    return Consumer2<ThemeProvider, LanguageProvider>(
+      builder: (context, themeProvider, languageProvider, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          themeMode: themeProvider.themeMode,
+          locale: languageProvider.locale,
+
+          supportedLocales: L10n.all,
+
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+
+          theme: ThemeData(
+            brightness: Brightness.light,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.white,
+              brightness: Brightness.light,
+            ),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.read<FetchProvider>().increamentCount();
-          },
-          child: Icon(Icons.add),
-        ),
-      ),
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.blue,
+              brightness: Brightness.dark,
+            ),
+          ),
+          home: const UserListView(),
+        );
+      },
     );
   }
 }
