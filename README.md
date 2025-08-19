@@ -1,4 +1,11 @@
  <h1>🏠 Fetch API </h1>
+  
+[![Flutter](https://img.shields.io/badge/Flutter-3.22-blue?logo=flutter)](https://flutter.dev)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen?logo=github-actions)](https://github.com/yourusername/trade-app/actions)  
+[![Stars](https://img.shields.io/github/stars/yourusername/trade-app?style=social)](https://github.com/yourusername/trade-app/stargazers)  
+[![Forks](https://img.shields.io/github/forks/yourusername/trade-app?style=social)](https://github.com/yourusername/trade-app/network/members)  
+[![Issues](https://img.shields.io/github/issues/yourusername/trade-app)](https://github.com/yourusername/trade-app/issues)  
 
 A modern property marketplace app built with Flutter, featuring a clean UI, dark/light themes, API integration, and smooth loading effects. Perfect for showcasing houses, apartments, and flats with detailed property listings.
 
