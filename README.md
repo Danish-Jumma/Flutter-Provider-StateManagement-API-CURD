@@ -1,16 +1,53 @@
-# provider_state
+# 🏠 Trade App  
 
-A new Flutter project.
+A modern Flutter project with a clean UI for showcasing property listings (House, Apartments, Flats, etc).  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Screenshots  
 
-A few resources to get you started if this is your first Flutter project:
+### 🏡 Home Screen  
+<p float="left">
+  <img src="screenshots/1.jpeg" alt="Home Screen 1" width="220"/>
+  <img src="screenshots/2.jpeg" alt="Home Screen 2" width="220"/>
+  <img src="screenshots/3.jpeg" alt="Home Screen 3" width="220"/>
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 📋 Details Screen  
+<p float="left">
+  <img src="screenshots/5.jpeg" alt="Details Screen 1" width="220"/>
+  <img src="screenshots/6.jpeg" alt="Details Screen 2" width="220"/>
+  <img src="screenshots/7.jpeg" alt="Details Screen 2" width="220"/>
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Features  
+✅ Modern Flutter UI  
+✅ Property Listings with Images  
+✅ Details Page Navigation  
+✅ Dark Mode Support *(optional)*  
+
+---
+
+## 🛠️ Getting Started  
+
+This project is a starting point for a **Flutter application**.  
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)  
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)  
+
+For more help, view the [official Flutter documentation](https://docs.flutter.dev/).  
+
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome!  
+If you’d like to fix a bug or suggest a feature, feel free to **open an issue** or **submit a pull request**.  
+
+---
+
+## ⭐ Show your support  
+
+If you like this project, **give it a star** ⭐ on GitHub — it helps others find it too!  
