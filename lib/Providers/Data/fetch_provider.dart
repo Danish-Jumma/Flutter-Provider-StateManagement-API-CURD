@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider_state/Models/user_model.dart';
+import 'package:provider_state/utils/constants.dart';
 
 class FetchProvider extends ChangeNotifier {
   List<UserModel> _users = [];
@@ -16,7 +17,7 @@ class FetchProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
-      final url = Uri.parse('https://jsonplaceholder.typicode.com/users');
+      final url = Uri.parse('${Constants.baseUrl}users');
 
       // 👇 Add headers to avoid 403
       final response = await http.get(

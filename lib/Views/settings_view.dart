@@ -110,7 +110,7 @@ class SettingsView extends StatelessWidget {
                 secondary: Icon(Icons.brightness_6),
                 value: provider.isDarkTheme,
                 onChanged: (val) {
-                  provider.toggleTheme(val);
+                  provider.toggleTheme();
                 },
               );
             },
